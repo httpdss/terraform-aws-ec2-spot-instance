@@ -2,7 +2,7 @@
 # EC2 spot instance
 ######
 resource "aws_spot_instance_request" "this" {
-  count = "${var.count}"
+  count = "${var.instance_count}"
 
   ami                    = "${var.ami}"
   instance_type          = "${var.instance_type}"

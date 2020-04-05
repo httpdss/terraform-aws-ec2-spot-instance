@@ -12,10 +12,10 @@ Usage
 
 ```hcl
 module "ec2_spot_cluster" {
-  source = "johnypony3/ec2-spot-instance/aws"
+  source = "httpdss/ec2-spot-instance/aws"
 
   name  = "my-cluster"
-  count = 5
+  instance_count = 5
 
   ami                    = "ami-ebd02392"
   instance_type          = "t2.micro"
@@ -47,6 +47,8 @@ Authors
 
 Module based on the work of [Anton Babenko](https://github.com/antonbabenko).
 Written and managed by [johnypony3](https://github.com/johnypony3)
+Adapted by [httpdss](https://github.com/httpdss)
+
 License
 -------
 
