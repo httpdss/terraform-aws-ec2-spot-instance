@@ -42,9 +42,4 @@ resource "aws_spot_instance_request" "this" {
     create = "${var.create_timeout}"
     delete = "${var.delete_timeout}"
   }
-
-  # Note: network_interface can't be specified together with associate_public_ip_address
-  # network_interface = "${var.network_interface}"
-
-  tags = "${merge(var.tags, map("Name", format("%s-%d", var.name, count.index+1)))}"
 }
