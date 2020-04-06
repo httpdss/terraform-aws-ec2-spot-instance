@@ -26,11 +26,6 @@ variable "tenancy" {
   default     = "default"
 }
 
-variable "ebs_optimized" {
-  description = "If true, the launched EC2 instance will be EBS-optimized"
-  default     = false
-}
-
 variable "disable_api_termination" {
   description = "If true, enables EC2 Instance Termination Protection"
   default     = false
@@ -108,21 +103,6 @@ variable "tags" {
 variable "volume_tags" {
   description = "A mapping of tags to assign to the devices created by the instance at launch time"
   default     = {}
-}
-
-variable "root_block_device" {
-  description = "Customize details about the root block device of the instance. See Block Devices below for details"
-  default     = []
-}
-
-variable "ebs_block_device" {
-  description = "Additional EBS block devices to attach to the instance"
-  default     = []
-}
-
-variable "ephemeral_block_device" {
-  description = "Customize Ephemeral (also known as Instance Store) volumes on the instance"
-  default     = []
 }
 
 variable "network_interface" {

@@ -18,12 +18,6 @@ resource "aws_spot_instance_request" "this" {
   ipv6_address_count          = var.ipv6_address_count
   ipv6_addresses              = var.ipv6_addresses
 
-  ebs_optimized          = var.ebs_optimized
-  volume_tags            = var.volume_tags
-  root_block_device      = var.root_block_device
-  ebs_block_device       = var.ebs_block_device
-  ephemeral_block_device = var.ephemeral_block_device
-
   source_dest_check                    = var.source_dest_check
   disable_api_termination              = var.disable_api_termination
   instance_initiated_shutdown_behavior = var.instance_initiated_shutdown_behavior
