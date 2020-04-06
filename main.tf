@@ -10,7 +10,7 @@ resource "aws_spot_instance_request" "this" {
   subnet_id              = var.subnet_id
   key_name               = var.key_name
   monitoring             = var.monitoring
-  vpc_security_group_ids = [var.vpc_security_group_ids]
+  vpc_security_group_ids = var.vpc_security_group_ids
   iam_instance_profile   = var.iam_instance_profile
 
   associate_public_ip_address = var.associate_public_ip_address
